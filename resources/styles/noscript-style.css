@@ -1,0 +1,21 @@
+/* блокі, што выпадаюць */
+.mainNavElem:hover .mainNavBlock {
+  max-height: none;
+}﻿
+
+/* загаловак рэгістрацыі */
+h3.reg {
+  display: none;
+}
+
+/* кнопка рэгістрацыі */
+button.reg {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  /* div, у якім знаходзіцца галоўнае меню */
+  div#divMainNav {
+    max-height: none;
+  }
+}

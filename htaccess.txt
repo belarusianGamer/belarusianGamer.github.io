@@ -1,0 +1,68 @@
+﻿## Safety configuration checking: https://observatory.mozilla.org/
+
+<IfModule mod_headers.c>
+  ## Content Security Policy (CSP)
+  Header set Content-Security-Policy: "child-src https://sienat.phr-gov.de; default-src 'self'; font-src https://sienat.phr-gov.de fonts.gstatic.com; frame-src https://sienat.phr-gov.de; img-src https://sienat.phr-gov.de; manifest-src 'self'; media-src https://sienat.phr-gov.de; object-src 'none'; prefetch-src 'self'; script-src 'unsafe-inline' https://sienat.phr-gov.de; style-src https://sienat.phr-gov.de fonts.googleapis.com 'unsafe-inline'; worker-src https://sienat.phr-gov.de; base-uri 'self'; form-action 'self' https://sienat.phr-gov.de; frame-ancestors 'self'; upgrade-insecure-requests;"
+    
+  ## HTTP Strict Transport Security (HSTS)
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+  ## Caching rules
+  # Don’t cache by default
+  Header set Cache-Control no-cache
+  Header set Expires: 0
+  # Cache static assets for 1 day
+  <filesMatch ".(ico|css|js|gif|jpeg|jpg|png|svg|woff|ttf|eot)$">
+    Header set Cache-Control "max-age=86400, public"
+  </filesMatch>
+</IfModule>
+
+
+
+## Prohibition on viewing files
+Options -Indexes
+
+
+
+## Redirection from HTTP to HTTPS 
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+
+
+# 400 Bad Request
+ErrorDocument 400 /resources/errors/400.php
+
+# 401 Authorization Required
+ErrorDocument 401 /resources/errors/401.php
+
+# 403 Forbidden
+ErrorDocument 403 /resources/errors/403.php
+
+# 404 Not found
+ErrorDocument 404 /resources/errors/404.php
+
+# 405 Method Not Allowed
+ErrorDocument 405 /resources/errors/405.php
+
+# 408 Request Timed Out
+ErrorDocument 408 /resources/errors/408.php
+
+# 414 Request URI Too Long
+ErrorDocument 414 /resources/errors/414.php
+
+# 500 Internal Server Error
+ErrorDocument 500 /resources/errors/500.php
+
+# 501 Not Implemented
+ErrorDocument 501 /resources/errors/501.php
+
+# 502 Bad Gateway 
+ErrorDocument 502 /resources/errors/502.php
+
+# 503 Service Unavailable 
+ErrorDocument 503 /resources/errors/503.php
+
+# 504 Gateway Timeout
+ErrorDocument 504 /resources/errors/504.php
