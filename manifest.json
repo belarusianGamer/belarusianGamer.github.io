@@ -35,19 +35,19 @@
   "name": "Galactic Senate",
   "orientation": "portrait",
   "prefer_related_applications": false,
-  "scope": ["https://sienat.phr-gov.de/", "javascript:void(0);"],
+  "scope": "/",
   "short_name": "Galactic Senate",
   "shortcuts": [
   {
     "name": "Legal acts",
     "short_name": "Legal acts",
-    "description": "Нацыянальны рэестр прававых актаў",
+    "description": "National register of legal acts",
     "url": "/nacyjanalny-archiu/zakanadaustva.html",
     "icons": [{ "src": "/resources/icons/web/favicon-192px.png", "sizes": "192x192" }]
   }, {
     "name": "Constitution",
     "short_name": "Constitution",
-    "description": "Constitution Рэспублікі",
+    "description": "Constitution of the Republic",
     "url": "/nacyjanalny-archiu/kanstytucyja.html",
     "icons": [{ "src": "/resources/icons/web/favicon-192px.png", "sizes": "192x192" }]
   }],

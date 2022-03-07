@@ -9,13 +9,13 @@
     <title>Galactic Senate &#x7c; 414</title>
     <meta name="description" content="Galactic Senate website: here you can learn about the legislation of the First Galactic Republic, as well as get a number of services">
     <!--Twitter Card-->
-    <meta name="twitter:url" content="https://sienat.phr-gov.de/">
+    <meta name="twitter:url" content="https://belarusiangamer.github.io/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Galactic Senate">
     <meta name="twitter:description" content="Galactic Senate website: here you can learn about the legislation of the First Galactic Republic, as well as get a number of services">
     <meta name="twitter:image" content="../../resources/icons/phr-flag-sq.png">
     <!--Open Graph-->
-    <meta property="og:url" content="https://sienat.phr-gov.de/">
+    <meta property="og:url" content="https://belarusiangamer.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Galactic Senate">
     <meta property="og:description" content="Galactic Senate website: here you can learn about the legislation of the First Galactic Republic, as well as get a number of services">
@@ -162,7 +162,13 @@
         <li><a href="../../mapa-sajta.html">Sitemap</a></li>
         <li><a href="../../technicnaja-padtrymka.html">Technical support</a></li>
       </ul>
-      <p>&#xa9; 2013&#x2013;2022 National Archives of the Republic</p>
+      <p><div class="mainNavElem mne1">
+  <button class="mainNavButton">My other works</button>
+  <div class="mainNavBlock">
+    <div class="mainNavBlockBar"></div>
+    <a href="../works/links-to-my-works.html">Links to my works</a>
+  </div>
+&#xa9; 2022 National Archives of the Republic</p>
     </footer>
 
     <script src="../../resources/scripts/main.js" async></script>
